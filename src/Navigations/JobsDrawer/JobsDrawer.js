@@ -1,7 +1,7 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
-// import Favorites from '../../Pages/Favorites';
+import Favorites from '../../Pages/Favorites';
 import Jobs from '../../Pages/Jobs';
 
 const Drawer = createDrawerNavigator();
@@ -22,11 +22,11 @@ const JobDrawer = () => {
         component={Jobs}
         options={{title: 'Jobs'}}
       />
-      {/* <Drawer.Screen
+      <Drawer.Screen
         name="FavoritesPage"
         component={Favorites}
         options={{title: 'Favorite Jobs'}}
-      /> */}
+      />
     </Drawer.Navigator>
   );
 };
