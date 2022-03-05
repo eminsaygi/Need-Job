@@ -1,10 +1,13 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View,Button} from 'react-native';
 
-const Jobs = () => {
+const Jobs = ({navigation}) => {
   return (
-    <View>
-      <Text>Jobs</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Button
+        onPress={() => navigation.navigate('DetailsDrawerPage')}
+        title="Go to notifications"
+      />
     </View>
   );
 };
