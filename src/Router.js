@@ -8,8 +8,8 @@ const Stack = createNativeStackNavigator();
 const Router = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Jobs" component={Jobs} />
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="JobsPage" component={Jobs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
