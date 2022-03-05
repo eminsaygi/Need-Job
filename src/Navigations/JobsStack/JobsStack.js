@@ -6,3 +6,23 @@ import JobsDrawer from '../JobsDrawer';
 
 const Stack = createNativeStackNavigator();
 
+const JobsStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="JobDrawer"
+        component={JobsDrawer}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="DetailsPage"
+        component={Details}
+        options={{
+          headerTintColor: '#ef534f',
+          title: 'Job Details',
+        }}></Stack.Screen>
+    </Stack.Navigator>
+  );
+};
+
+export default JobsStack;
