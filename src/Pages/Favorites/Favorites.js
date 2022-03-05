@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, Button} from 'react-native';
 
-const Favorites = () => {
+const Favorites = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Button
-        onPress={() => navigation.navigate('DetailsPage')}
-        title="Go to notifications"
+        onPress={() => navigation.navigate('JobDrawer')}
+        title="Yan Menü Aç"
       />
     </View>
   );
