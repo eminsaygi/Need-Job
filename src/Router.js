@@ -2,10 +2,12 @@ import React from 'react';
 import {SafeAreaView, Text, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import Jobs from './Pages/Jobs';
 import Detail from './Pages/Details';
+
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const Router = () => {
   return (
@@ -18,6 +20,15 @@ const Router = () => {
         />
         <Stack.Screen name="DetailsPage" component={Detail} />
       </Stack.Navigator>
+      <Drawer.Navigator>
+        <Drawer.Screen
+          name="JobsDrawerPage"
+          component={Jobs}
+          options={{title: 'Jobs'}}></Drawer.Screen>
+        <Drawer.Screen
+          name="DetailsDrawerPage"
+          component={Detail}></Drawer.Screen>
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 };
