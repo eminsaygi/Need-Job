@@ -10,7 +10,11 @@ const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="JobsPage">
-        <Stack.Screen name="JobsPage" component={Jobs} />
+        <Stack.Screen
+          name="JobsPage"
+          component={Jobs}
+          options={{title: 'Jobs'}}
+        />
         <Stack.Screen name="DetailsPage" component={Detail} />
       </Stack.Navigator>
     </NavigationContainer>
