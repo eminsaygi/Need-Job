@@ -12,14 +12,6 @@ const Drawer = createDrawerNavigator();
 const Router = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="JobsPage">
-        <Stack.Screen
-          name="JobsPage"
-          component={Jobs}
-          options={{title: 'Jobs'}}
-        />
-        <Stack.Screen name="DetailsPage" component={Detail} />
-      </Stack.Navigator>
       <Drawer.Navigator>
         <Drawer.Screen
           name="JobsDrawerPage"
