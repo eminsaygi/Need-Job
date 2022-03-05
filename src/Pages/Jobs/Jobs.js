@@ -6,7 +6,7 @@ const Jobs = ({navigation}) => {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
         onPress={() => navigation.navigate('DetailsPage')}
-        title="Go to notifications"
+        title="Detay Sayfasını Aç"
       />
     </View>
   );

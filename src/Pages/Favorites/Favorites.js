@@ -5,8 +5,8 @@ const Favorites = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Button
-        onPress={() => navigation.navigate('JobDrawer')}
-        title="Yan Menü Aç"
+        onPress={() => navigation.navigate('JobsPage')}
+        title="Job sayfasını aç"
       />
     </View>
   );
