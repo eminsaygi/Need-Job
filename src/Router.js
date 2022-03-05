@@ -19,7 +19,8 @@ const Router = () => {
           options={{title: 'Jobs'}}></Drawer.Screen>
         <Drawer.Screen
           name="DetailsDrawerPage"
-          component={Detail}></Drawer.Screen>
+          component={Detail}
+          options={{title: 'Details'}}></Drawer.Screen>
       </Drawer.Navigator>
     </NavigationContainer>
   );
