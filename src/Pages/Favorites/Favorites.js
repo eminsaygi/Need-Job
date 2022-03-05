@@ -1,10 +1,13 @@
 import React from 'react';
-import {View,Text} from 'react-native';
+import {View, Button} from 'react-native';
 
 const Favorites = () => {
   return (
-    <View>
-      <Text>Favorites</Text>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Button
+        onPress={() => navigation.navigate('DetailsPage')}
+        title="Go to notifications"
+      />
     </View>
   );
 };
