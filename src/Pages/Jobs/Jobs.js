@@ -24,6 +24,12 @@ const Jobs = ({navigation}) => {
   if (error) {
     return <Error />;
   }
+
+  const renderJob = ({item}) => {
+    return (
+      <JobCard job={item} onSelect={() => handleSelect(item.id)}></JobCard>
+    );
+  };
   return (
     <SafeAreaView>
       <FlatList
@@ -34,5 +40,4 @@ const Jobs = ({navigation}) => {
     </SafeAreaView>
   );
 };
-
 export default Jobs;
