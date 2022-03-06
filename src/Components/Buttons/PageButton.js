@@ -1,16 +1,18 @@
 import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import styles from './PageButton.style';
+import Styles from './PageButton.style';
+
 const PageButton = ({text, onPress, icon}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={Styles.container}>
       <MaterialCommunityIcons
-        style={styles.icon}
+        style={Styles.icon}
         name={icon}
         size={25}
-        color="#fff"></MaterialCommunityIcons>
-      <Text style={styles.text}>{text}</Text>
+        color="#fff"
+      />
+      <Text style={Styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 };
