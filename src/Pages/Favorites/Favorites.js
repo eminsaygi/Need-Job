@@ -3,7 +3,7 @@ import {FlatList, SafeAreaView} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {removeFavorite} from '../../Context/favoritesSlice';
-import JobCard from '../../Components/JobCard';
+import JobCard from 'components/JobCard';
 
 import Styles from './Favorites.style';
 
