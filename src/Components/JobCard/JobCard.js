@@ -1,7 +1,8 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import {useEffect, useState} from 'react';
-import {View, Text, FlatList, TouchableOpacity} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
+
+import Styles from './JobCard.style'
+import PageButton from '../../Components/Buttons';
 
 const JobCard = () => {
   return (
