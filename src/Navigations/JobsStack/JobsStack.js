@@ -12,7 +12,9 @@ const JobsStack = () => {
       <Stack.Screen
         name="JobDrawer"
         component={JobsDrawer}
-        options={{headerShown: false}}
+        options={{
+          headerShown: false,
+        }}
       />
       <Stack.Screen
         name="DetailsPage"
@@ -20,7 +22,8 @@ const JobsStack = () => {
         options={{
           headerTintColor: '#ef534f',
           title: 'Job Details',
-        }}></Stack.Screen>
+        }}
+      />
     </Stack.Navigator>
   );
 };
