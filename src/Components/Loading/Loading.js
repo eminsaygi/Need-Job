@@ -1,11 +1,10 @@
 import React from 'react';
-import {View, Text, SafeAreaView, FlatList} from 'react-native';
-import Config from 'react-native-config';
-
+import {ActivityIndicator, View} from 'react-native';
+import styles from './Loading.style';
 const Loading = () => {
   return (
-    <View style={Styles.container}>
-      <Text>Loading...</Text>
+    <View style={styles.container}>
+      <ActivityIndicator size="large" color="#ef534f"></ActivityIndicator>
     </View>
   );
 };
