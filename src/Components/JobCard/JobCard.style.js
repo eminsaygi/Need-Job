@@ -30,4 +30,10 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginVertical: 5,
   },
+  time: {
+    alignSelf: 'flex-start',
+    color: '#ef534f',
+    fontWeight: 'bold',
+    marginVertical: 5,
+  }
 });

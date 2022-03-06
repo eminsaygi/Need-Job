@@ -23,6 +23,7 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
           }
         />
       </View>
+      <CardText style={Styles.time} text={job.levels[0].name} />
       <CardText
         style={Styles.level}
         text={
