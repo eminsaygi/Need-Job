@@ -5,12 +5,12 @@ import styles from './PageButton.style';
 const PageButton = ({text, onPress, icon}) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      {' '}
       <MaterialCommunityIcons
         style={styles.icon}
         name={icon}
         size={25}
         color="#fff"></MaterialCommunityIcons>
+      <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 };
