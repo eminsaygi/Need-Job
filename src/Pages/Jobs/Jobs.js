@@ -19,7 +19,7 @@ const Jobs = ({navigation}) => {
 
   if (loading) {
     return <Loading />;
-    console.log("Buraya uğradı")
+    console.log('Buraya uğradı');
   }
   if (error) {
     return <Error />;
