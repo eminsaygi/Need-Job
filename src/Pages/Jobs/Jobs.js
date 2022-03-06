@@ -44,11 +44,13 @@ const Jobs = ({navigation}) => {
   };
 
   const Footer = () => {
-    <View>
-      <PageButton text="Previos" onPress={decreasePage}></PageButton>
-      <Text>{page} / 50</Text>
-      <PageButton text="Next" onPress={increasePage}></PageButton>
-    </View>;
+    return (
+      <View>
+        <PageButton text="Previos" onPress={decreasePage}></PageButton>
+        <Text>{page} / 50</Text>
+        <PageButton text="Next" onPress={increasePage}></PageButton>
+      </View>
+    );
   };
   return (
     <SafeAreaView>
