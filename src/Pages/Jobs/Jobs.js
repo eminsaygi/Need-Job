@@ -1,6 +1,11 @@
-import React from 'react';
-import {View, Button, SafeAreaView, FlatList} from 'react-native';
+import React,{useEffect,useState} from 'react';
+import {View, Text, SafeAreaView, FlatList} from 'react-native';
+import Config from '.react-native-config';
 
+import Error from '../../Assets/Animations/error.json'
+import JobCard from '../../Components/JobCard'
+import PageButton from '../../Components/Buttons'
+import useFetch from '../../Hooks/useFetch'
 const Jobs = ({navigation}) => {
   return (
     <SafeAreaView>
