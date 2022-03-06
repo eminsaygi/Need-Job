@@ -15,6 +15,7 @@ import {useDispatch} from 'react-redux';
 import Error from '../../Components/Error';
 import Loading from '../../Components/Loading';
 import PageButton from '../../Components/Buttons';
+
 import useFetch from '../../Hooks/useFetch';
 
 import Styles from './Details.style';
