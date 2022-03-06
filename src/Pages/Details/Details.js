@@ -11,7 +11,7 @@ import Config from 'react-native-config';
 import RenderHTML from 'react-native-render-html';
 import {useDispatch} from 'react-redux';
 
-//import {addFavorite} from '../../Context/favoritesSlice';
+import {addFavorite} from '../../Context/favoritesSlice';
 import Error from '../../Components/Error';
 import Loading from '../../Components/Loading';
 import PageButton from '../../Components/Buttons';
@@ -72,7 +72,7 @@ const Details = ({route}) => {
   };
 
   const addFavoriteList = job => {
-    //dispatch(addFavorite(job));
+    dispatch(addFavorite(job));
   };
 
   const handleSubmit = item => {
