@@ -9,7 +9,7 @@ export default StyleSheet.create({
     borderColor: '#bdbdbd',
     backgroundColor: '#fff',
   },
-  text: {marginVertical: 3, color: '#1C658C'},
+  text: {marginVertical: 3, color: '#1C658C', fontSize: 15},
   title: {
     fontWeight: 'bold',
     fontSize: 16,
@@ -35,5 +35,5 @@ export default StyleSheet.create({
     color: '#ef534f',
     fontWeight: 'bold',
     marginVertical: 5,
-  }
+  },
 });
