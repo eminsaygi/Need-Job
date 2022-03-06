@@ -12,7 +12,18 @@ import Loading from '../../Components/Loading';
 const Jobs = ({navigation}) => {
   const [page, setPage] = useState(1);
   const {data, error, loading} = useFetch(`${Config.API_URL}?page=${page}`);
+  // https://www.themuse.com/api/public/jobs?page=1
 
+  useEffect(() => {
+    page;
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+  if (error) {
+    return <Error />;
+  }
   return (
     <SafeAreaView>
       <FlatList
