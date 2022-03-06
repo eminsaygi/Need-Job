@@ -1,14 +1,29 @@
 import React from 'react';
-import {View, Button} from 'react-native';
+import {FlatList, SafeAreaView} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 
-const Favorites = ({navigation}) => {
+import {removeFavorite} from '../../Context/FavoritesSlice';
+import JobCard from '../../Components/JobCard';
+
+import Styles from './Favorites.style';
+
+const Favorites = () => {
+  const favoritesList = useSelector(state => state.favorites.favoritesList);
+  const dispatch = useDispatch();
+  const removeFav = id => {
+    dispatch(removeFavorite(id));
+  };
+
+  const renderFavorites = ({item}) => {
+    return (
+      <JobCard job={item} isButton={true} onRemove={() => removeFav(item.id)} />
+    );
+  };
+
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Button
-        onPress={() => navigation.navigate('JobsPage')}
-        title="Job sayfasını aç"
-      />
-    </View>
+    <SafeAreaView style={Styles.container}>
+      <FlatList data={favoritesList} renderItem={renderFavorites} />
+    </SafeAreaView>
   );
 };
 
