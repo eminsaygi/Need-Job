@@ -1,34 +1,39 @@
+import PageButton from '../Buttons';
 import React from 'react';
-import {View, Pressable} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
 
-import styles from './JobCard.style';
-import PageButton from '../../Components/Buttons';
+import Styles from './JobCard.style';
+
+const CardText = ({style, text}) => {
+  return <Text style={style}>{text}</Text>;
+};
 
 const JobCard = ({job, onSelect, isButton, onRemove}) => {
   return (
-    <Pressable style={styles.container} onPress={onSelect}>
-      <CardText style={styles.title} text={job.name}></CardText>
-      <CardText style={styles.text} text="Sprinklr"></CardText>
-      <View style={styles.locationContainer}>
+    <Pressable style={Styles.container} onPress={onSelect}>
+      <CardText style={Styles.title} text={job.name} />
+      <CardText style={Styles.text} text="Sprinklr" />
+      <View style={Styles.locationContainer}>
         <CardText
-          style={styles.location}
+          style={Styles.location}
           text={
             job.locations && job.locations.length > 0
               ? job.locations[0].name
-              : 'No İnofrmations'
-          }></CardText>
+              : 'No information'
+          }
+        />
       </View>
       <CardText
-        style={styles.level}
+        style={Styles.level}
         text={
           job.levels && job.levels.length > 0
             ? job.levels[0].name
-            : 'No İnformations'
-        }></CardText>
-      {isButton ? (
-        <PageButton text="Remove" onPress={onRemove}></PageButton>
-      ) : null}
+            : 'No information'
+        }
+      />
+      {isButton ? <PageButton text="Remove" onPress={onRemove} /> : null}
     </Pressable>
   );
 };
+
 export default JobCard;
