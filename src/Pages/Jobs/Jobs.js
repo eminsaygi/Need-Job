@@ -1,17 +1,21 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
-import {View, Text, SafeAreaView, FlatList} from 'react-native';
+import {FlatList, SafeAreaView, Text, View} from 'react-native';
 import Config from 'react-native-config';
 
-import Error from '../../Assets/Animations/error.json';
+import Error from '../../Components/Error';
 import JobCard from '../../Components/JobCard';
 import PageButton from '../../Components/Buttons';
-import useFetch from '../../Hooks/useFetch';
+import useFetch from '../../Hooks';
 
+import Styles from './Jobs.style';
 import Loading from '../../Components/Loading';
+
 const Jobs = ({navigation}) => {
   const [page, setPage] = useState(1);
-  const {data, error, loading} = useFetch(`${Config.API_URL}?page=${page}`);
-  // https://www.themuse.com/api/public/jobs?page=1
+  const {data, error, loading} = useFetch(
+    `${Config.JOBS_API_URL}?page=${page}`,
+  );
 
   useEffect(() => {
     page;
@@ -19,7 +23,6 @@ const Jobs = ({navigation}) => {
 
   if (loading) {
     return <Loading />;
-    console.log('Buraya uğradı');
   }
   if (error) {
     return <Error />;
@@ -30,36 +33,36 @@ const Jobs = ({navigation}) => {
   };
 
   const renderJob = ({item}) => {
-    return (
-      <JobCard job={item} onSelect={() => handleSelect(item.id)}></JobCard>
-    );
+    return <JobCard job={item} onSelect={() => handleSelect(item.id)} />;
   };
 
   const increasePage = () => {
-    return setPage(page + 1); // 1 sayfa ileri
+    return setPage(page + 1);
   };
-
   const decreasePage = () => {
-    return page === 1 ? setPage(1) : setPage(page - 1); // Sayfa 1 ise aynı sayfada kal. Eğer değilse 1 sayfa geriye dön
+    return page === 1 ? setPage(1) : setPage(page - 1);
   };
 
   const Footer = () => {
     return (
-      <View>
-        <PageButton text="Previos" onPress={decreasePage}></PageButton>
+      <View style={Styles.footerContainer}>
+        <PageButton text="Previos" onPress={decreasePage} />
         <Text>{page} / 50</Text>
-        <PageButton text="Next" onPress={increasePage}></PageButton>
+        <PageButton text="Next" onPress={increasePage} />
       </View>
     );
   };
+
   return (
-    <SafeAreaView>
+    <SafeAreaView style={Styles.container}>
       <FlatList
         data={data.results}
         renderItem={renderJob}
         key={item => item.id}
-        ListFooterComponent={<Footer></Footer>}></FlatList>
+        ListFooterComponent={<Footer />}
+      />
     </SafeAreaView>
   );
 };
+
 export default Jobs;
