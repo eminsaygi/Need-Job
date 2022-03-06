@@ -1,11 +1,17 @@
 import React from 'react';
-import {View, Button} from 'react-native';
-
-const PageButton = ({navigation, title, routeName}) => {
+import {Text, TouchableOpacity} from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import styles from './PageButton.style';
+const PageButton = ({text, onPress, icon}) => {
   return (
-    <View>
-      <Button onPress={() => navigation.navigate(routeName)} title={title} />
-    </View>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
+      {' '}
+      <MaterialCommunityIcons
+        style={styles.icon}
+        name={icon}
+        size={25}
+        color="#fff"></MaterialCommunityIcons>
+    </TouchableOpacity>
   );
 };
 
