@@ -25,10 +25,30 @@ const Jobs = ({navigation}) => {
     return <Error />;
   }
 
+  const handleSelect = id => {
+    navigation.navigate('DetailsPage', {id});
+  };
+
   const renderJob = ({item}) => {
     return (
       <JobCard job={item} onSelect={() => handleSelect(item.id)}></JobCard>
     );
+  };
+
+  const increasePage = () => {
+    return setPage(page + 1); // 1 sayfa ileri
+  };
+
+  const decreasePage = () => {
+    return page === 1 ? setPage(1) : setPage(page - 1); // Sayfa 1 ise aynı sayfada kal. Eğer değilse 1 sayfa geriye dön
+  };
+
+  const Footer = () => {
+    <View>
+      <PageButton text="Previos" onPress={decreasePage}></PageButton>
+      <Text>{page} / 50</Text>
+      <PageButton text="Next" onPress={increasePage}></PageButton>
+    </View>;
   };
   return (
     <SafeAreaView>
