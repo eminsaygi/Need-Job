@@ -5,35 +5,12 @@ import Config from 'react-native-config';
 
 const useFetch = () => {
   const [data, setData] = useState([]);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const fetchData = async () => {
-    setLoading(true);
+  const getData = async () => {
     try {
-      const response = await fetch(`${Config.API_URL}/jobs?page=${page}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const json = await response.json();
-      setData([...data, ...json.results]);
-      setTotalPages(json.total_pages);
-      setLoading(false);
-    } catch (error) {
-      setError(true);
-      setLoading(false);
-    }
+    } catch (error) {}
   };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  return {data, error, loading, page, totalPages, fetchData};
 };
-
 export default useFetch;
