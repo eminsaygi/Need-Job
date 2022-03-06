@@ -7,7 +7,6 @@ import JobCard from '../../Components/JobCard';
 import PageButton from '../../Components/Buttons';
 import useFetch from '../../Hooks/useFetch';
 
-import styles from './Jobs.style';
 import Loading from '../../Components/Loading';
 const Jobs = ({navigation}) => {
   const [page, setPage] = useState(1);
@@ -20,6 +19,7 @@ const Jobs = ({navigation}) => {
 
   if (loading) {
     return <Loading />;
+    console.log("Buraya uğradı")
   }
   if (error) {
     return <Error />;
