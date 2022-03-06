@@ -17,6 +17,7 @@ const Jobs = ({navigation}) => {
     `${Config.JOBS_API_URL}?page=${page}`,
   );
 
+
   useEffect(() => {
     page;
   }, []);
