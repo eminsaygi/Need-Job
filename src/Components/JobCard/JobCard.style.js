@@ -9,7 +9,7 @@ export default StyleSheet.create({
     borderColor: '#bdbdbd',
     backgroundColor: '#fff',
   },
-  text: {marginVertical: 3},
+  text: {marginVertical: 3, color: '#1C658C'},
   title: {
     fontWeight: 'bold',
     fontSize: 16,
