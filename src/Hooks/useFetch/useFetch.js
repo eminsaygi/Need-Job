@@ -1,8 +1,6 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-import {View, Text, SafeAreaView, FlatList} from 'react-native';
-import Config from 'react-native-config';
-
+import axios from 'axios';
 const useFetch = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -10,7 +8,14 @@ const useFetch = () => {
 
   const getData = async () => {
     try {
-    } catch (error) {}
+      const {data: responseData} = await axios.get(url);
+      setData(responseData);
+      setLoading(false);
+    } catch (err) {
+      setError(err);
+      setLoading(false);
+    }
   };
+  return {data, error, loading};
 };
 export default useFetch;

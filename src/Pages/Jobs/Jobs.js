@@ -7,7 +7,7 @@ import JobCard from '../../Components/JobCard';
 import PageButton from '../../Components/Buttons';
 import useFetch from '../../Hooks/useFetch';
 
-import Styles from './Jobs.style';
+import styles from './Jobs.style';
 import Loading from '../../Components/Loading';
 const Jobs = ({navigation}) => {
   const [page, setPage] = useState(1);
