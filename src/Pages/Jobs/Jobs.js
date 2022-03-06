@@ -6,6 +6,9 @@ import Error from '../../Assets/Animations/error.json'
 import JobCard from '../../Components/JobCard'
 import PageButton from '../../Components/Buttons'
 import useFetch from '../../Hooks/useFetch'
+
+import Styles from './Jobs.style'
+import Loading from '../../Components/Loading'
 const Jobs = ({navigation}) => {
   return (
     <SafeAreaView>
