@@ -3,7 +3,7 @@ import LottieView from 'lottie-react-native';
 
 const Error = () => {
   return (
-    <LottieView source={require('assets/Animations/error.json')} autoPlay />
+    <LottieView source={require('')} autoPlay />
   );
 };
 
