@@ -12,7 +12,7 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
   return (
     <Pressable style={Styles.container} onPress={onSelect}>
       <CardText style={Styles.title} text={job.name} />
-      <CardText style={Styles.text} text="Sprinklr" />
+      <CardText style={Styles.text} text={job.company.name} />
       <View style={Styles.locationContainer}>
         <CardText
           style={Styles.location}
