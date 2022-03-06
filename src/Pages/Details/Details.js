@@ -15,7 +15,7 @@ import {useDispatch} from 'react-redux';
 import Error from '../../Components/Error';
 import Loading from '../../Components/Loading';
 import PageButton from '../../Components/Buttons';
-import useFetch from '../../Hooks/useFetch'
+import useFetch from '../../Hooks/useFetch';
 
 import Styles from './Details.style';
 
@@ -24,13 +24,13 @@ const Header = ({job}) => {
     <View style={Styles.headerContainer}>
       <Text style={Styles.title}>{job.name}</Text>
       <Text style={Styles.locations}>
-        <TextColor text="Location :" />{' '}
+        <TextColor text="Location :" />
         {job.locations && job.locations.length > 0
           ? job.locations[0].name
           : 'No information'}
       </Text>
       <Text style={Styles.levels}>
-        <TextColor text="Job Level :" />{' '}
+        <TextColor text="Job Level :" />
         {job.levels && job.levels.length > 0
           ? job.levels[0].name
           : 'No information'}
