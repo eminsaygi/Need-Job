@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Pressable} from 'react-native';
+import {View, Pressable} from 'react-native';
 
 import styles from './JobCard.style';
 import PageButton from '../../Components/Buttons';
@@ -18,6 +18,16 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
               : 'No İnofrmations'
           }></CardText>
       </View>
+      <CardText
+        style={styles.level}
+        text={
+          job.levels && job.levels.length > 0
+            ? job.levels[0].name
+            : 'No İnformations'
+        }></CardText>
+      {isButton ? (
+        <PageButton text="Remove" onPress={onRemove}></PageButton>
+      ) : null}
     </Pressable>
   );
 };
