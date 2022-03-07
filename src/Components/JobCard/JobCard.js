@@ -25,7 +25,6 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
     return newDate - oldDate;
   }
 
-
   return (
     <Pressable style={Styles.container} onPress={onSelect}>
       <CardText style={Styles.title} text={job.name} />
@@ -43,7 +42,8 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
       <View style={Styles.footerView}>
         <CardText
           style={Styles.time}
-          text={job.publication_date.substr(0, 10)}
+          // text={job.publication_date.substr(0, 10)
+          text={DateTime() + ' Days Ago'}
         />
         <CardText
           style={Styles.level}
