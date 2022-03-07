@@ -24,6 +24,10 @@ export default StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
+  footerView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   level: {
     alignSelf: 'flex-end',
     color: '#ef534f',

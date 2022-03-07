@@ -23,7 +23,7 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
           }
         />
       </View>
-      <View>
+      <View style={Styles.footerView}>
       <CardText style={Styles.time} text={job.publication_date} />
       <CardText
         style={Styles.level}
