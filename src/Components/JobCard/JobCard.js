@@ -13,8 +13,10 @@ const CardText = ({style, text}) => {
 const JobCard = ({job, onSelect, isButton, onRemove}) => {
   var today = new Date();
   var old = new Date(job.publication_date)
-
+today.setTime(today.getTime()- old)
   console.log(today + "  --  " +old) 
+
+
   return (
     <Pressable style={Styles.container} onPress={onSelect}>
       <CardText style={Styles.title} text={job.name} />
