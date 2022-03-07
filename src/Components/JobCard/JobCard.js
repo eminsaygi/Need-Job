@@ -26,11 +26,7 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
       <CardText style={Styles.time} text={job.levels[0].name} />
       <CardText
         style={Styles.level}
-        text={
-          job.levels && job.levels.length > 0
-            ? job.levels[0].name
-            : 'No information'
-        }
+        text={job.publication_date}
       />
       {isButton ? <PageButton text="Remove" onPress={onRemove} /> : null}
     </Pressable>
