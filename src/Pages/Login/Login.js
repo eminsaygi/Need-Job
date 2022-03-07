@@ -45,7 +45,7 @@ const Login = ({navigation}) => {
               value={values.password}
               onType={handleChange('password')}
               iconname="key"
-              isSecure></Input>
+              ></Input>
             <Button
               text="Giriş Yap"
               onPress={handleSubmit}
