@@ -15,6 +15,7 @@ const Router = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="LoginPage" component={Login}></Stack.Screen>
+          <Stack.Screen name="JobsPage" component={JobsStack}></Stack.Screen>
         </Stack.Navigator>
         {/* <Stack.Navigator>
           <Stack.Screen name="LoginPage" component={Login}></Stack.Screen>
