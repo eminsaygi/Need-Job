@@ -43,7 +43,7 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
         <CardText
           style={Styles.time}
           // text={job.publication_date.substr(0, 10)
-          text={DateTime() + ' Days Ago'}
+          text={DateTime() == 0 ? "Today" : DateTime() +' Days Ago'}
         />
         <CardText
           style={Styles.level}
