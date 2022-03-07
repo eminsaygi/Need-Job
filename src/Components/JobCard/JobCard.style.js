@@ -27,7 +27,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
   footerView: {
-    padding: 5,
+    paddingTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
