@@ -14,8 +14,12 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
   var today = new Date();
   var old = new Date(job.publication_date)
 // today.setDate(today.getDate()- 5)
-  var diff = Math.abs(today - old) / 1000;
-  console.log(today + "  --  " +diff) 
+  var year= old.getFullYear()
+  var mont = old.getMonth()
+  var  day = old.getDay()
+  //console.log(today + "  --  " +diff) 
+
+  console.log(year + " -- " + mont + " -- " + day)
 
 
   return (
