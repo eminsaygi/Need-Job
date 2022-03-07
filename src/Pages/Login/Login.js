@@ -14,13 +14,14 @@ const Login = ({navigation}) => {
 
   function handleLogin() {
     post(Config.API_AUTH_URL + '/login', values);
+    console.error(Config.API_AUTH_URL + '/login');
   }
 
   if (error) {
     Alert.alert('Error', 'Bir Hata oldu');
   }
   if (data.status === "Error") {
-    console.error("BURAYA UPRADI");
+   
 
     Alert.alert('Error', 'Kullanıcı Bulunamadı');
   } else {
