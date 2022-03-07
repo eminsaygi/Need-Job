@@ -27,43 +27,11 @@ const Login = ({navigation}) => {
 
   return (
     <SafeAreaView style={Styles.container}>
-      <View style={Styles.logoContainer}>
+      <View style={styles.logo_container}>
         <Image
-          style={Styles.logo}
-          source={require('../../Assets/login.png')}
-        />
+          style={styles.logo}
+          source={require('../../Assets/login.png')}></Image>
       </View>
-      <Formik
-        initialValues={{email: '', password: ''}}
-        onSubmit={values => {
-          handleLogin();
-        }}>
-        {({handleChange, handleBlur, handleSubmit, values}) => (
-          <View style={Styles.formContainer}>
-            <View style={Styles.inputContainer}>
-              <Text style={Styles.label}>Email</Text>
-              <TextInput
-                style={Styles.input}
-                onChangeText={handleChange('email')}
-                onBlur={handleBlur('email')}
-                value={values.email}
-              />
-            </View>
-            <View style={Styles.inputContainer}>
-              <Text style={Styles.label}>Password</Text>
-              <TextInput
-                style={Styles.input}
-                onChangeText={handleChange('password')}
-                onBlur={handleBlur('password')}
-                value={values.password}
-              />
-            </View>
-            <View style={Styles.buttonContainer}>
-              <Button title="Login" onPress={handleSubmit} />
-            </View>
-          </View>
-        )}
-      </Formik>
     </SafeAreaView>
   );
 };
