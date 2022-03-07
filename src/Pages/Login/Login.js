@@ -19,7 +19,9 @@ const Login = ({navigation}) => {
   if (error) {
     Alert.alert('Error', 'Bir Hata oldu');
   }
-  if (data.status === null) {
+  if (data.status === "Error") {
+    console.error("BURAYA UPRADI");
+
     Alert.alert('Error', 'Kullanıcı Bulunamadı');
   } else {
     navigation.navigate('JobsPage');
