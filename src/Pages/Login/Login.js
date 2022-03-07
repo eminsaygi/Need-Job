@@ -30,7 +30,7 @@ const Login = ({navigation}) => {
       <View style={Styles.logoContainer}>
         <Image
           style={Styles.logo}
-          source={require('../../assets/images/logo.png')}
+          source={require('../../Assets/login.png')}
         />
       </View>
       <Formik
