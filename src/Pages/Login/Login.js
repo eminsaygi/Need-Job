@@ -32,6 +32,29 @@ const Login = ({navigation}) => {
           style={styles.logo}
           source={require('../../Assets/login.png')}></Image>
       </View>
+      <Formik
+        initialValues={{username: '', password: ''}}
+        onSubmit={handleLogin}>
+        {({handleSubmit, handleChange, values}) => (
+          <View style={styles.body_container}>
+            <Input
+              placeholder="Kullanıcı adı giriniz"
+              value={values.username}
+              onType={handleChange('username')}
+              iconname="account"></Input>
+            <Input
+              placeholder="Şifrenizi giriniz"
+              value={values.password}
+              onType={handleChange('password')}
+              iconname="key"
+              isSecure></Input>
+            <Button
+              text="Giriş Yap"
+              onPress={handleSubmit}
+              loading={loading}></Button>
+          </View>
+        )}
+      </Formik>
     </SafeAreaView>
   );
 };
