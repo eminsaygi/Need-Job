@@ -13,7 +13,7 @@ const CardText = ({style, text}) => {
 const JobCard = ({job, onSelect, isButton, onRemove}) => {
   var today = new Date();
   var old = new Date(job.publication_date)
-today.setTime(today.getTime()- old)
+today.setDate(today.getDate()- 5)
   console.log(today + "  --  " +old) 
 
 
