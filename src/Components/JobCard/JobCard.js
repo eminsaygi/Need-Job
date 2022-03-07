@@ -8,27 +8,22 @@ const CardText = ({style, text}) => {
   return <Text style={style}>{text}</Text>;
 };
 
-
-
 const JobCard = ({job, onSelect, isButton, onRemove}) => {
-  var old = new Date(job.publication_date)
-  var oldYear= old.getFullYear()
-  var oldMont = old.getMonth()
-  var  oldDay = old.getDay()
-  var oldDate = (oldYear*360+oldMont*30+oldDay)
+  function DateTime() {
+    var old = new Date(job.publication_date);
+    var oldYear = old.getFullYear();
+    var oldMont = old.getMonth();
+    var oldDay = old.getDay();
+    var oldDate = oldYear * 360 + oldMont * 30 + oldDay;
 
+    var today = new Date();
+    var newYear = today.getFullYear();
+    var newMont = today.getMonth();
+    var newDay = today.getDay();
+    var newDate = newYear * 360 + newMont * 30 + newDay;
 
-  var today = new Date();
-  var newYear= today.getFullYear()
-  var newMont = today.getMonth()
-  var newDay = today.getDay()
-  var newDate =(newYear*360+newMont*30+newDay)
-// today.setDate(today.getDate()- 5)
-  
-  //console.log(today + "  --  " +diff) 
-
-  console.log()
-  console.log(newDate - oldDate)
+    return newDate - oldDate;
+  }
 
 
   return (
@@ -46,7 +41,10 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
         />
       </View>
       <View style={Styles.footerView}>
-        <CardText style={Styles.time} text={(job.publication_date).substr(0,10)} />
+        <CardText
+          style={Styles.time}
+          text={job.publication_date.substr(0, 10)}
+        />
         <CardText
           style={Styles.level}
           text={
