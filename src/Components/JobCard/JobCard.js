@@ -11,15 +11,19 @@ const CardText = ({style, text}) => {
 
 
 const JobCard = ({job, onSelect, isButton, onRemove}) => {
-  var today = new Date();
   var old = new Date(job.publication_date)
-// today.setDate(today.getDate()- 5)
+
   var year= old.getFullYear()
   var mont = old.getMonth()
   var  day = old.getDay()
+  var oldDate = (year*360+mont*30+day)
+  var today = new Date();
+// today.setDate(today.getDate()- 5)
+  
   //console.log(today + "  --  " +diff) 
 
   console.log(year + " -- " + mont + " -- " + day)
+  console.log(oldDate)
 
 
   return (
