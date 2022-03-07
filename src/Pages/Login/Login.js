@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, Image, View, Alert} from 'react-native';
 import {Formik} from 'formik';
 
-import Styles from './Login.style';
+import styles from './Login.style';
 import Input from '../../Components/Input';
 import Button from '../../Components/Buttons';
 
@@ -19,17 +19,12 @@ const Login = ({navigation}) => {
 
   if (error) {
     Alert.alert('Error', 'Bir Hata oldu');
-  }
-  if (data.status === "Error") {
-   
-
-    Alert.alert('Error', 'Kullanıcı Bulunamadı');
   } else {
     navigation.navigate('JobsPage');
   }
 
   return (
-    <SafeAreaView style={Styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.logo_container}>
         <Image
           style={styles.logo}
