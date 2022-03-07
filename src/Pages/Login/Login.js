@@ -7,7 +7,6 @@ import Input from '../../Components/Input';
 import Button from '../../Components/Buttons';
 
 import Config from 'react-native-config';
-
 import usePost from '../../Hooks/usePost';
 
 const Login = ({navigation}) => {
