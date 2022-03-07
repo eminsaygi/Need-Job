@@ -15,8 +15,7 @@ const Jobs = ({navigation}) => {
   const [page, setPage] = useState(1);
   const {data, error, loading} = useFetch(
     `${Config.JOBS_API_URL}?page=${page}`,
-  );
-
+  ); // https://www.themuse.com/api/public/jobs?page=1
 
   useEffect(() => {
     page;
