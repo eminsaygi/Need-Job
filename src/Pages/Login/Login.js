@@ -3,6 +3,8 @@ import {SafeAreaView, Image, View, Alert} from 'react-native';
 import {Formik} from 'formik';
 
 import Styles from './Login.style';
+import Input from '../../Components/Input';
+import Button from '../../Components/Buttons';
 
 import Config from 'react-native-config';
 
