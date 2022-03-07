@@ -24,13 +24,16 @@ const JobCard = ({job, onSelect, isButton, onRemove}) => {
         />
       </View>
       <View style={Styles.footerView}>
-      <CardText style={Styles.time} text={job.publication_date} />
-      <CardText
-        style={Styles.level}
-        text={job.publication_date}
-      />
+        <CardText style={Styles.time} text={job.publication_date} />
+        <CardText
+          style={Styles.level}
+          text={
+            job.levels && job.levels.length > 0
+              ? job.levels[0].name
+              : 'No information'
+          }></CardText>
       </View>
-      
+
       {isButton ? <PageButton text="Remove" onPress={onRemove} /> : null}
     </Pressable>
   );
