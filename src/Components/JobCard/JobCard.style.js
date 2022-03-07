@@ -9,14 +9,16 @@ export default StyleSheet.create({
     borderColor: '#bdbdbd',
     backgroundColor: '#fff',
   },
-  text: {marginVertical: 3, color: '#1C658C', fontSize: 15},
+  text: {marginVertical: 6, color: '#1C658C', fontSize: 15, paddingBottom: 5},
   title: {
     fontWeight: 'bold',
     fontSize: 16,
+    paddingBottom: 5,
   },
   locationContainer: {
     backgroundColor: '#ef534f',
     padding: 3,
+
     borderRadius: 10,
     alignSelf: 'baseline',
   },
@@ -25,6 +27,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
   footerView: {
+    padding: 5,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -36,7 +39,7 @@ export default StyleSheet.create({
   },
   time: {
     alignSelf: 'flex-start',
-    color: '#ef534f',
+    color: '#362706',
     fontWeight: 'bold',
     marginVertical: 5,
   },
