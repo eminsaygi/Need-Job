@@ -14,7 +14,6 @@ const Login = ({navigation}) => {
 
   function handleLogin() {
     post(Config.API_AUTH_URL + '/login', values);
-    console.error(Config.API_AUTH_URL + '/login');
   }
 
   if (error) {
