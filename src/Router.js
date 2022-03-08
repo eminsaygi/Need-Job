@@ -7,18 +7,11 @@ import JobsStack from './Navigations/JobsStack';
 import Stores from './Context/store';
 import Login from './Pages/Login';
 
-const Stack = createNativeStackNavigator();
-
 const Router = () => {
   return (
     <Provider store={Stores}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='LoginPage'>
-          <Stack.Screen name="LoginPage" component={Login}></Stack.Screen>
-        </Stack.Navigator>
-        <Stack.Screen name="JobsPage" component={JobsStack}></Stack.Screen>
-
-        {/* <JobsStack></JobsStack> */}
+        <JobsStack></JobsStack>
       </NavigationContainer>
     </Provider>
   );

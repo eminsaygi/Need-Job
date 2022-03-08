@@ -19,7 +19,7 @@ const Login = ({navigation}) => {
   if (error) {
     Alert.alert('Error', 'Bir Hata oldu');
   } else {
-    navigation.navigate('JobsPage');
+    navigation.navigate('JobsPageG');
   }
 
   return (
