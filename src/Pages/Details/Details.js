@@ -58,8 +58,8 @@ const Header = ({job}) => {
         {job.company.name}
       </Text>
       <Text style={Styles.levels}>
-        <TextColor text="Job Company :" />
-        {job.company.name}
+        <TextColor text="Publication Date : " />
+        {job.publication_date.substr(0, 10)}
       </Text>
       <Text style={Styles.header}>Job Detail</Text>
     </View>
