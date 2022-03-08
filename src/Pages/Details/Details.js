@@ -22,6 +22,22 @@ import useFetch from '../../Hooks/useFetch';
 import Styles from './Details.style';
 
 const Header = ({job}) => {
+  function DateTime() {
+    var old = new Date(job.publication_date);
+    var oldYear = old.getFullYear();
+    var oldMont = old.getMonth();
+    var oldDay = old.getDay();
+    var oldDate = oldYear * 360 + oldMont * 30 + oldDay;
+
+    var today = new Date();
+    var newYear = today.getFullYear();
+    var newMont = today.getMonth();
+    var newDay = today.getDay();
+    var newDate = newYear * 360 + newMont * 30 + newDay;
+
+    return newDate - oldDate;
+  }
+
   return (
     <View style={Styles.headerContainer}>
       <Text style={Styles.title}>{job.name}</Text>
@@ -36,6 +52,10 @@ const Header = ({job}) => {
         {job.levels && job.levels.length > 0
           ? job.levels[0].name
           : 'No information'}
+      </Text>
+      <Text style={Styles.levels}>
+        <TextColor text="Job Company :" />
+        {job.company.name}
       </Text>
       <Text style={Styles.levels}>
         <TextColor text="Job Company :" />
