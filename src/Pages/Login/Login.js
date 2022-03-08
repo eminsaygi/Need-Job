@@ -4,7 +4,7 @@ import {Formik} from 'formik';
 
 import styles from './Login.style';
 import Input from '../../Components/Input';
-import Button from '../../Components/Buttons';
+import Button from './'
 
 import Config from 'react-native-config';
 import usePost from '../../Hooks/usePost';
