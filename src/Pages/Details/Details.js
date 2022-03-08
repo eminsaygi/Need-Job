@@ -37,6 +37,10 @@ const Header = ({job}) => {
           ? job.levels[0].name
           : 'No information'}
       </Text>
+      <Text style={Styles.levels}>
+        <TextColor text="Job Company :" />
+        {job.company.name}
+      </Text>
       <Text style={Styles.header}>Job Detail</Text>
     </View>
   );

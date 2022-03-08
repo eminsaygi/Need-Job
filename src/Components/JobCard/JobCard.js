@@ -8,7 +8,11 @@ const CardText = ({style, text}) => {
   return <Text style={style}>{text}</Text>;
 };
 
+
+
+
 const JobCard = ({job, onSelect, isButton, onRemove}) => {
+
   function DateTime() {
     var old = new Date(job.publication_date);
     var oldYear = old.getFullYear();
