@@ -1,13 +1,10 @@
-<h1 align="left">👨‍💻 Learn Java 📙  </h1>
+<h1 align="left">👨‍💻 Need Job 📙  </h1>
 
 <h3 align="left">
    :dart: About : 
-  Learn Java application is currently only available on the Android platform.
+  A platform where job seekers and employers meet
 </h3>
 
-Play Store |  
-:-------------------------:
-[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" width="350" >](https://play.google.com/store/apps/details?id=com.java_kurs)
 
 ## :rocket: Technologies
 
