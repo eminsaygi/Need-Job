@@ -49,25 +49,18 @@ Dependencies{
 
 DevDependencies {
 
-- "@babel/core": "^7.16.5",
-- "@babel/plugin-proposal-optional-chaining": "^7.8.3",
-- "@babel/runtime": "^7.16.5",
-- "@bam.tech/react-native-make": "^3.0.3",
-- "@react-native-community/eslint-config": "^3.0.1",
-- "@svgr/cli": "^6.1.2",
-- "babel-jest": "^27.4.5",
-- "eslint": "^8.5.0",
-- "jest": "^27.4.5",
-- "metro-react-native-babel-preset": "^0.66.2",
-- "react-native-svg": "^9.12.0",
-- "react-test-renderer": "17.0.2"
+-   "@babel/core": "^7.17.5",
+-   "@babel/runtime": "^7.17.2",
+-   "@react-native-community/eslint-config": "^3.0.1",
+-   "babel-jest": "^27.5.1",
+-   "babel-plugin-module-resolver": "^4.1.0",
+-   "eslint": "^8.10.0",
+-   "jest": "^27.5.1",
+-   "metro-react-native-babel-preset": "^0.69.0",
+-   "react-test-renderer": "17.0.2"
     }
 
-Scripts {
 
--     "svgr": "svgr ./src/icons -d ./src/components/icons --native  --svg-props ,clasName=,stroke=currentColor --svgo-config .svgorc.json"
-
-  }
 
 ## Emulator Videos
 
