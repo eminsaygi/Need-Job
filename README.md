@@ -64,9 +64,9 @@ DevDependencies {
 
 ## Emulator Videos
 
-IOS Emulator | Android Emulator  
-:-------------------------: | :-------------------------:
-![Preview](/assets/img/iosGif.gif) | ![Preview](/assets/img/AndroidGif.gif)
+IOS Emulator 
+:-------------------------:
+![Preview](/src/Assets/ScreenShots/gif.gif)
 
 
 MIT License
